@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/ESR2/ESR2.css" />
+  <title>ESR2</title>
+</head>
+
+<body>
+  <div class="topnav">
+    <div class="menu-hamburger">
+        <div class="pr-10" onclick="openNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 16">
+                <defs>
+                    <style>
+                        .a {
+                            fill: #fff;
+                        }
+                    </style>
+                </defs>
+                <path class="a" d="M4.5,25h24V22.333H4.5Zm0-6.667h24V15.667H4.5ZM4.5,9v2.667h24V9Z"
+                    transform="translate(-4.5 -9)" />
+            </svg>
+        </div>
+        <div>
+          MGM Deal Memo
+        </div>
+    </div>
+    <div class="nav-actions-container">
+        <div class="notifications-action pr-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
+                <defs>
+                    <style>
+                        .a {
+                            fill: #fff;
+                        }
+                    </style>
+                </defs>
+                <path class="a"
+                    d="M18.875,28.336a.671.671,0,0,0-.658.528,1.3,1.3,0,0,1-.259.564.979.979,0,0,1-.834.305,1,1,0,0,1-.834-.305,1.3,1.3,0,0,1-.259-.564.671.671,0,0,0-.658-.528h0a.675.675,0,0,0-.658.823,2.313,2.313,0,0,0,2.408,1.921,2.309,2.309,0,0,0,2.408-1.921.678.678,0,0,0-.658-.823Z"
+                    transform="translate(-9.139 -11.08)" />
+                <path class="a"
+                    d="M22.574,18.625c-.771-1.007-2.287-1.6-2.287-6.105,0-4.627-2.062-6.487-3.984-6.933-.18-.045-.31-.1-.31-.293V5.151a1.222,1.222,0,0,0-1.2-1.22h-.03a1.222,1.222,0,0,0-1.2,1.22v.144c0,.184-.13.248-.31.293-1.927.451-3.984,2.306-3.984,6.933,0,4.508-1.517,5.093-2.287,6.105a.984.984,0,0,0,.8,1.577h14.02A.984.984,0,0,0,22.574,18.625Zm-1.952.288H8.95a.217.217,0,0,1-.165-.362,6,6,0,0,0,1.051-1.656,11.147,11.147,0,0,0,.716-4.374,7.551,7.551,0,0,1,1.046-4.3,3.212,3.212,0,0,1,1.937-1.369,1.758,1.758,0,0,0,.931-.521.4.4,0,0,1,.6-.01A1.818,1.818,0,0,0,16,6.847a3.212,3.212,0,0,1,1.937,1.369,7.551,7.551,0,0,1,1.046,4.3,11.147,11.147,0,0,0,.716,4.374,6.071,6.071,0,0,0,1.076,1.681A.2.2,0,0,1,20.622,18.913Z"
+                    transform="translate(-6.775 -3.93)" />
+            </svg>
+        </div>
+        <div class="avatar-action pl-10">
+            <div class="profile-picture">
+                <img src="../assets/media/profile.svg" />
+            </div>
+            <div class="pl-10">
+                <span>Lesley Drukker</span>
+                <span>
+                    <img src="../assets/media/down-arrow.svg" />
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+  <div class="dashboard-container new-submission-container">
+    <section>
+      <div class="new-submission-title">
+        <div class="new-submission-welcome-title" style="font-size: 36px;">
+          New Opportunity
+        </div>
+      </div>
+    </section>
+   
+    <section>
+      <div class="submission-card">
+        <div class="check-row ">
+          <div  style="display: flex;">
+          <div class="submission-status" style="margin-left: 70px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 24 24" width="40">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                class="svg-color" fill="#247C4A" />
+            </svg>
+            <div>
+              <b class="txt-black">Deal Type and
+
+                <span> ESR Requirments</span></b>
+            </div>
+          </div>
+          <span class="dotted-line"></span>
+          <div class="submission-status" style="margin-left: 40px;" onclick="updateStatus(this)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 24 24" width="40" onclick="fillSvg(this)">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              class="svg-color" fill="#83744e" />
+            </svg>
+            <div>
+              <b>Opportunity information</b>
+            </div>
+          </div>
+          </div>
+          <!-- <div  style="height: 90px; min-width: 0px;  position: absolute;"></div> -->
+          <div class="submission-status" style="margin-right: 30px;" onclick="updateStatus(this)">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 24 24" width="40" onclick="fillSvg(this)">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              class="svg-color fill-grey" fill= "#AFAFAF"/>
+            </svg>
+            <div>
+              <b>CST Assignment</b>
+            </div>
+          </div>
+          <div onclick="updateStatus(this)" style="margin-right: 100px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 24 24" width="40" onclick="fillSvg(this)">
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                class="svg-color fill-grey" fill="#AFAFAF" />
+            </svg>
+            <div>
+              <b>Reviewer</b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <div class="new-submission-welcome-title" style="font-size: 22px;">
+      CST Assignment
+    </div>
+    <section>
+      <div class="submission-form-container" style="width: 530px; border-radius: 4px;">
+        <h4 style="font-family: 'Poppins'; height: 1px;">CST Assignment Details</h4>
+        <div class="submission-form">
+          <form>
+            
+            
+            <div class="form-control" id="overall-deal"  style="width: 440px;"  >
+              <label for="company-type" style="display: none">Company Type</label>
+              <br />
+              <div class="custom-select" id="is-primary-phone">
+                <label for="company-type" style="visibility: hidden">CST-A TEAM LEADER</label>
+                <select name="company-type" id="is-primary-email" placeholder="Company Type"
+                  onclick="displayTitle(this)">
+                  <option selected value="">Jodi Gibson</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+            </div>
+            
+ 
+            
+            <div class="form-control" style="width: 440px;">
+              <label for="primary-address" style="display: none">Comments</label>
+              <br />
+              <textarea name="primary-address" id="primary-address" onclick="displayTitle(this)"
+                placeholder="Comments" class="text_area_input" rows="5"></textarea>
+            </div>
+         
+          
+        </div>
+     
+           <br>
+           <div style="display: flex;">
+           <div style="margin-left: 40px;">
+            <input type="checkbox" id="v1" name="memo1" value="memo">
+            <label  style="width: 600px;" for="memo1">Deal Memo</label>
+            </div>
+            &nbsp;
+            &nbsp;
+            <div  style="margin-left: 50px;">
+              <input type="checkbox"   id="doc" name="doc" value="doc">
+            <label  style="width: 600px;" for="doc">Other Supportive Documents</label>
+            </div>
+          </div>
+            <div class="form-control file-upload">
+             
+              <div>
+                <input type="file" id="file" />
+                <label style="margin-left: 50px;"  for="file">BROWSE FILES</label>
+              </div>
+              <div>
+                <input type="file" id="file" />
+                <label style="margin-right: 180px;" for="file">BROWSE FILES</label>
+              </div>
+            </div>
+            <br>
+          </form>
+          </div>
+         
+      <div class="form-control form-btn-row" >
+        <button class="form-submit-btn" type="submit">
+          NEXT
+        </button>
+        <button  class="form-submit-btn" type="submit">
+          SAVE DRAFT
+        </button>
+        <button class="form-cancel-btn">BACK</button>
+        
+      </div>
+    </section>
+  </div>
+  <br>
+  <br>
+  
+
+  <script>
+    document.getElementById("overall-deal").onchange = function () {
+      document.getElementById("lookup-deals").disabled = !this.checked;
+      if (document.getElementById("lookup-deals").disabled) {
+        document.getElementById("lookup-deals").value = "";
+        document.getElementById("lookup-deals-label").classList.remove("form-control-label");
+      }
+    };
+    document.getElementById("is-primary-email").onchange = function () {
+      document.getElementsByClassName("is-primary-email")[0].classList.toggle('txt-black');
+    };
+    document.getElementById("is-primary-phone").onchange = function () {
+      document.getElementsByClassName("is-primary-phone")[0].classList.toggle('txt-black');
+    };
+    var textarea = document.querySelectorAll("textarea");
+    var index = 0;
+    for ( ; index < textarea.length; index++) { 
+      textarea[index].addEventListener("keydown", autosize);
+    }
+    
+
+
+    function addMoreEmail (el) {
+      var itm = document.getElementById("email-input-form");
+      itm.querySelector('.add-contact-switch').classList.remove('hidden');
+      var cln = itm.cloneNode(true);
+      var newTableID = Date.now();
+      cln.id = newTableID;
+      document.getElementById("email-input-form").insertAdjacentElement("afterend",cln);
+    }
+    function addMorePhone (el) {
+      var itm = document.getElementById("phone-input-form");
+      itm.querySelector('.add-contact-switch').classList.remove('hidden');
+      var cln = itm.cloneNode(true);
+      var newTableID = Date.now();
+      cln.id = newTableID;
+      document.getElementById("phone-input-form").insertAdjacentElement("afterend",cln);
+    }
+
+    function removeImage (event) {
+      document.querySelector('.cross-button').addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+      var fileInput = document.getElementById("image-upload");
+      var output = document.getElementById("output").src="";
+      document.getElementsByClassName('cross-button')[0].style.display = 'none';
+      fileInput.value = "";
+    }
+    function autosize() {
+      var el = this;
+      setTimeout(function () {
+        el.style.cssText = "height:auto; padding:0";
+        el.style.cssText = "height:" + el.scrollHeight + "px";
+      }, 0);
+    }
+
+    function displayTitle(e, isAutocomplete = false) {
+      const elm = e.labels[0];
+      //  selected_boxes =  documentpasswordLabel.getElementsByClassName("selected-item")[0];
+      //     //console.log("teststts",selected_boxes);
+      //     selected_boxes.classList.remove('selected-item');
+      if (!isAutocomplete) {
+        elm.classList.add("form-control-label");
+      } else {
+        elm.classList.add("form-control-ac-label");
+      }
+      e.placeholder = "Type here...";
+    }
+
+    // custom select code
+    var x, i, j, l, ll, selElmnt, a, b, c;
+    /* Look for any elements with the class "custom-select": */
+    x = document.getElementsByClassName("custom-select");
+    l = x.length;
+    for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      ll = selElmnt.length;
+      /* For each element, create a new DIV that will act as the selected item: */
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+      x[i].appendChild(a);
+      /* For each element, create a new DIV that will contain the option list: */
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 1; j < ll; j++) {
+        /* For each option in the original select element,
+create a new DIV that will act as an option item: */
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function (e) {
+          /* When an item is clicked, update the original select box,
+    and the selected item: */
+          var y, i, k, s, h, sl, yl;
+          lbl = this.parentNode.parentNode.getElementsByTagName("label")[0];
+          lbl.classList.add("form-control-label");
+          select_box =  this.parentNode.parentNode.getElementsByClassName("select-selected")[0];
+          select_box.classList.add("selected-item");
+          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+          sl = s.length;
+          h = this.parentNode.previousSibling;
+          for (i = 0; i < sl; i++) {
+            if (s.options[i].innerHTML == this.innerHTML) {
+              this.parentNode.parentNode.classList.add("selected-font-black");
+              s.selectedIndex = i;
+              h.innerHTML = this.innerHTML;
+              y = this.parentNode.getElementsByClassName("same-as-selected");
+              yl = y.length;
+              for (k = 0; k < yl; k++) {
+                y[k].removeAttribute("class");
+              }
+              this.setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          h.click();
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function (e) {
+        /* When the select box is clicked, close any other select boxes,
+and open/close the current select box: */
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.add("selected-item");
+        this.classList.toggle("select-arrow-active");
+      });
+    }
+
+    function closeAllSelect(elmnt) {
+      /* A function that will close all select boxes in the document,
+except the current select box: */
+      var x,
+        y,
+        i,
+        xl,
+        yl,
+        arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+      for (i = 0; i < yl; i++) {
+        if (elmnt == y[i]) {
+          arrNo.push(i);
+        } else {
+          y[i].classList.remove("select-arrow-active");
+        }
+      }
+      for (i = 0; i < xl; i++) {
+        if (arrNo.indexOf(i)) {
+          x[i].classList.add("select-hide");
+        }
+      }
+    }
+
+    /* If the user clicks anywhere outside the select box,
+then close all select boxes: */
+    document.addEventListener("click", closeAllSelect);
+
+    const selected = {};
+
+    const getUsers = async () => {
+      const result = await fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((json) => json);
+      const data = result.map((user) => user.name);
+
+      // add autocomplete to desired inputs
+      autocomplete(document.getElementById("writers-name"), data);
+      autocomplete(document.getElementById("associated-agency"), data);
+      autocomplete(document.getElementById("submitted-by"), data);
+      autocomplete(document.getElementById("representative"), data);
+      autocomplete(document.getElementById("company-name"), data);
+      autocomplete(document.getElementById("project-name"), data);
+      autocomplete(document.getElementById("covered-by"), data);
+
+      // setting default value for an input elm
+      await setDefaultVal(document.getElementById("writers-name"), data[0]).then(
+        (res) => {
+          const node = document.getElementById("writers-name").nextElementSibling;
+          createDefaultChip(node);
+        }
+      );
+
+      await setDefaultVal(document.getElementById("company-name"), data[1]).then(
+        (res) => {
+          const node = document.getElementById("company-name").nextElementSibling;
+          createDefaultChip(node);
+        }
+      );
+
+      await setDefaultVal(document.getElementById("associated-agency"), data[1]).then(
+        (res) => {
+          const node = document.getElementById("associated-agency").nextElementSibling;
+          createDefaultChip(node);
+        }
+      );
+    };
+
+    // to set a default GET value for specified input elm
+    async function setDefaultVal(elm, val) {
+      elm.value = val;
+      let event = new Event("input", {
+        bubbles: true,
+        cancelable: true,
+      });
+
+      await elm.dispatchEvent(event);
+    }
+
+    // to create chip for deafult GET value
+    async function createDefaultChip(node) {
+      const toClick = node.querySelector("input");
+      let event = new Event("click", {
+        bubbles: true,
+        cancelable: true,
+      });
+      await toClick.dispatchEvent(event);
+    }
+
+    // dummy array for autocomplete
+    //const users = getUsers();
+
+    // function to add a selected value into "selected" object
+    function addToSelected(elm, inputElm) {
+      console.log(elm, inputElm);
+      const selectedID = inputElm.parentNode.parentNode
+        .getElementsByTagName("input")[0]
+        .name.split("-")[0];
+      if (!selected[selectedID]) {
+        selected[selectedID] = [];
+      }
+
+      const hasAlready = selected[selectedID].indexOf(elm);
+
+      if (hasAlready !== -1) {
+        return;
+      }
+      selected[selectedID].push(elm);
+      const node = document.createElement("DIV");
+      node.setAttribute("class", "chip-span");
+      const imageNode = document.createElement("img");
+      imageNode.setAttribute("src","../assets/media/profile.svg");
+      imageNode.setAttribute("class","chip-image");
+      const textNode = document.createElement("SPAN");
+      textNode.innerText = elm;
+      textNode.setAttribute("class", "chip-text");
+      const crossSpan = document.createElement("BUTTON");
+      crossSpan.setAttribute("class", "cross-span");
+      //crossSpan.innerText = "x";
+
+      // function to remove value from selected object
+      crossSpan.addEventListener("click", function (e) {
+        const toRemove = e.target.parentNode.firstChild;
+        const newArr = selected[selectedID].filter(function (val) {
+          return val === toRemove;
+        });
+        e.target.parentNode.parentNode.removeChild(
+          e.target.parentNode
+        );
+        selected[selectedID] = newArr;
+      });
+      //imageNode.insertAdjacentElement("beforeend", textNode);
+      //textNode.insertAdjacentElement("beforeend", crossSpan);
+      
+      node.appendChild(imageNode);
+      node.appendChild(textNode);
+      node.appendChild(crossSpan);
+      //node.appendChild(crossSpan);
+      inputElm.parentNode.parentNode.prepend(node);
+    }
+
+    // autocomplete watcher function
+    function autocomplete(inp, arr) {
+      /*the autocomplete function takes two arguments,
+    the text field element and an array of possible autocompleted values:*/
+      var currentFocus;
+      // addToSelected(arr[0], inp);
+      /*execute a function when someone writes in the text field:*/
+      inp.addEventListener("input", function (e) {
+        var a,
+          b,
+          i,
+          val = this.value;
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) {
+          return false;
+        }
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+          /*check if the item starts with the same letters as the text field value:*/
+          if (
+            arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()
+          ) {
+            /*create a DIV element for each matching element:*/
+            b = document.createElement("DIV");
+            /*make the matching letters bold:*/
+            b.innerHTML =
+              "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+            b.innerHTML += arr[i].substr(val.length);
+            /*insert a input field that will hold the current array item's value:*/
+            b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+            /*execute a function when someone clicks on the item value (DIV element):*/
+            b.addEventListener("click", function (e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              // selected.push(inp.value);
+              console.log(inp);
+              addToSelected(inp.value, this);
+              inp.value = "";
+              /*close the list of autocompleted values,
+            (or any other open lists of autocompleted values:*/
+              closeAllLists();
+            });
+            a.appendChild(b);
+          }
+        }
+      });
+      /*execute a function presses a key on the keyboard:*/
+      inp.addEventListener("keydown", function (e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+          /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+          currentFocus++;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 38) {
+          //up
+          /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+          currentFocus--;
+          /*and and make the current item more visible:*/
+          addActive(x);
+        } else if (e.keyCode == 13) {
+          /*If the ENTER key is pressed, prevent the form from being submitted,*/
+          e.preventDefault();
+          if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+          }
+        }
+      });
+      function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x) return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length) currentFocus = 0;
+        if (currentFocus < 0) currentFocus = x.length - 1;
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+      }
+      function removeActive(x) {
+        /*a function to remove the "active" class from all autocomplete items:*/
+        for (var i = 0; i < x.length; i++) {
+          x[i].classList.remove("autocomplete-active");
+        }
+      }
+      function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+      except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+          if (elmnt != x[i] && elmnt != inp) {
+            x[i].parentNode.removeChild(x[i]);
+          }
+        }
+      }
+      /*execute a function when someone clicks in the document:*/
+      document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+      });
+    }
+
+    var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+    if(document.getElementById("output").src != "") {
+      console.log("124")
+      document.getElementsByClassName('cross-button')[0].style.display = 'inline';
+    }
+
+
+    }
+      // add autocomplete watcher to elements by element id
+  </script>
+</body>
+
+</html>
